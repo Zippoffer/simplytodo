@@ -32,6 +32,7 @@ angular
       	Object:      $scope.id,
         job: 				 $scope.job,
         description: $scope.description,
+        
       }
 
       $http
@@ -50,9 +51,7 @@ angular
 				$http
 				.post('/api/remove', {listId})
 				.then(() => $scope.lists.splice(index, 1))
-				console.log(listId)
-			  // var index = $scope.lists.indexOf(list);
-			  // $scope.lists.splice(index, 1);     
+				console.log(listId)    
 			}
 
   })

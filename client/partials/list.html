@@ -3,13 +3,14 @@
 
 
 <form ng-submit="sendList()">
-	<input type="text" ng-model="job">
-	<input type="text" ng-model="description" placeholder="do it!" />
+	<input type="text" ng-model="job" placeholder="job to do" required>
+	<input type="text" ng-model="description" placeholder="when to do it!" />
+	
 	<input type="submit">
 </form>
 <hr/>
 <ul>
-	<li ng-repeat="list in lists">You've gotta {{list.job}}: at {{list.description}} <br><a class="btn btn-danger" ng-click="remove(list._id, $index)">Delete</a>  <a class="btn btn-success" ng-click="update(list)">Update</a></li>
+	<li ng-repeat="list in lists">You've gotta {{list.job}} <br> at {{list.description}}<br><a class="btn btn-danger" ng-click="remove(list._id, $index)">Delete</a>  <a class="btn btn-success" ng-click="update(list)">Update</a></li>
 </ul>
 
 
